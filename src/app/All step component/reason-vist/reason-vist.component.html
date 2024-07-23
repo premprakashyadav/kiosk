@@ -1,0 +1,44 @@
+<div class="wrapper">
+   
+    <!-- <section class="headingbg">
+        <h1 class="mb-0 text-center">Reason To Visit</h1>
+    </section>
+    <div class="container-fluid custom-width mt-5">
+        <div class="row">
+           
+            <div class="col-6 mx-auto">
+                <div class="manually">
+                <div class="p-5">
+                    <div class="form-group">
+                        <label for="">Enter Below Reason</label>
+                        <textarea  pInputTextarea name="" id="" rows="5" class="form-control"></textarea>
+                       </div>
+                       <div><p-button label="Submit" (onClick)="submitReason()"></p-button></div>  
+                
+            </div>
+            </div>
+                
+            </div>
+        </div>
+    </div> -->
+
+
+    <div class="container">
+        <div class="visit-reason-step" style="width: 830px;">
+            <h1>Reason of Visit</h1>
+            <p>Please enter the reason for your visit:</p>
+    
+            <form (ngSubmit)="submitReason()">
+                <div class="form-group">
+                    <textarea [(ngModel)]="reason" name="reason" rows="5" placeholder="Enter your reason here" required></textarea>
+                </div>
+                
+                <div class="button-row">
+                    <button type="submit" class="submit-button">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</div>
+

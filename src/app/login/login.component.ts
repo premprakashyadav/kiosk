@@ -14,6 +14,8 @@ export class LoginComponent implements OnInit {
   loginForm : FormGroup
   message = '';
 
+  showRegister: boolean = false;
+
   constructor(
     private formBuilder: FormBuilder,
     private loginService: LoginService,

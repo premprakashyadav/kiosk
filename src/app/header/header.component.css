@@ -1,0 +1,11 @@
+.bg-dark {
+    background: #f0f5f8 !important;
+    /* box-shadow: 1px 1px 8px #c4c3c3; */
+}
+
+.home {
+    background: linear-gradient(to right, #0b59a3, #198754);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 0.5rem;
+}

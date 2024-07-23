@@ -1,0 +1,140 @@
+<!-- <div class="wrapper">
+  
+    <section class="headingbg">
+        <h1 class="mb-0 text-center">Driving License Details</h1>
+    </section>
+    <div class="container-fluid custom-width mt-5">
+        <div class="row">
+           
+            <div class="col-6 mx-auto">
+                <div class="manually">
+                <div class="p-5">
+                    <div class="row mb-3">
+                        <div class="col-8">
+                            <ul class="list-unstyled">
+                                <li><span>First Name:</span>John</li>
+                                <li><span>Last Name:</span>Doe</li>
+                                <li><span>Email Id:</span>info@advaa.com</li>
+                                <li><span>Date Of Birth:</span> 06 September 1991</li>
+                            </ul>
+                        </div>
+                        <div class="col-4">
+                            <div class="profilepic">
+                                <img src="../assets/images/profile.jpg" alt="Profile" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                  <div class="mt-5">
+                    <p-button label="Proceed" icon="pi pi-forward" (onClick)="proceed()"></p-button>
+                  </div>  
+                
+            </div>
+            </div>
+                
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div class="container">
+    <div class="confirmation-step">
+        <h1>Confirmation</h1>
+        <p>Please confirm all the sections below to proceed further:</p>
+
+        <div class="details-row">
+            <div class="detail-section" [class.confirmed]="personalConfirmed">
+                <h2>Personal Details</h2>
+                <p>Name: {{ personalDetails.name }}</p>
+                <p>Date of Birth: {{ personalDetails.dob }}</p>
+                <p>Contact: {{ personalDetails.contact }}</p>
+                <button class="confirm-button" (click)="confirmSection('personal')"
+                        [disabled]="personalConfirmed">Confirm</button>
+                <button class="edit-button" (click)="editSection('personal')">Edit</button>
+            </div>
+            
+            <div class="detail-section" [class.confirmed]="insuranceConfirmed">
+                <h2>Insurance Details</h2>
+                <p>Insurance Provider: {{ insuranceDetails.provider }}</p>
+                <p>Policy Number: {{ insuranceDetails.policyNumber }}</p>
+                <button class="confirm-button" (click)="confirmSection('insurance')"
+                        [disabled]="insuranceConfirmed">Confirm</button>
+                <button class="edit-button" (click)="editSection('insurance')">Edit</button>
+            </div>
+            
+            <div class="detail-section" [class.confirmed]="appointmentConfirmed">
+                <h2>Appointment Details</h2>
+                <p>Doctor: {{ appointmentDetails.doctor }}</p>
+                <p>Date: {{ appointmentDetails.date }}</p>
+                <p>Time: {{ appointmentDetails.time }}</p>
+                <button class="confirm-button" (click)="confirmSection('appointment')"
+                        [disabled]="appointmentConfirmed">Confirm</button>
+                <button class="edit-button" (click)="editSection('appointment')">Edit</button>
+            </div>
+        </div>
+
+        <div *ngIf="allConfirmed" class="proceed-row">
+            <button class="proceed-button" (click)="proceed()">Proceed</button>
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="confirmation-step">
+        <h1>Confirmation</h1>
+        <p>Please confirm the following details:</p>
+
+        <div class="details-column">
+            <div class="detail-section" [class.confirmed]="personalConfirmed">
+                <div class="detail-content">
+                    <div>
+                        <h2>Personal Details</h2>
+                        <p>Name: {{ personalDetails.name }}</p>
+                        <p>Date of Birth: {{ personalDetails.dob }}</p>
+                        <p>Contact: {{ personalDetails.contact }}</p>
+                    </div>
+                    <div class="button-row">
+                        <button class="confirm-button" (click)="confirmSection('personal')"
+                                [disabled]="personalConfirmed">Confirm</button>
+                        <button class="edit-button" (click)="editSection('personal')">Edit</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="detail-section" [class.confirmed]="insuranceConfirmed">
+                <div class="detail-content">
+                    <div>
+                        <h2>Insurance Details</h2>
+                        <p>Insurance Provider: {{ insuranceDetails.provider }}</p>
+                        <p>Policy Number: {{ insuranceDetails.policyNumber }}</p>
+                    </div>
+                    <div class="button-row">
+                        <button class="confirm-button" (click)="confirmSection('insurance')"
+                                [disabled]="insuranceConfirmed">Confirm</button>
+                        <button class="edit-button" (click)="editSection('insurance')">Edit</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="detail-section" [class.confirmed]="appointmentConfirmed">
+                <div class="detail-content">
+                    <div>
+                        <h2>Appointment Details</h2>
+                        <p>Doctor: {{ appointmentDetails.doctor }}</p>
+                        <p>Date: {{ appointmentDetails.date }}</p>
+                        <p>Time: {{ appointmentDetails.time }}</p>
+                        <p>Your appointment details found, you do not need walk in process</p>
+                    </div>
+                    <div class="button-row">
+                        <button class="confirm-button" (click)="confirmSection('appointment')"
+                                [disabled]="appointmentConfirmed">Confirm</button>
+                        <button class="edit-button" (click)="editSection('appointment')">Edit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="allConfirmed" class="proceed-row">
+            <button class="proceed-button" (click)="proceed()">Proceed</button>
+        </div>
+    </div>
+</div>

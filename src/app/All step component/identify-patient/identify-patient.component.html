@@ -1,0 +1,103 @@
+<div class="wrapper">
+    <!-- <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <img src="assets/images/advaa-health-logo.png" alt="Advaa Health" width="200">
+                </div>
+            </div>
+        </div>
+    </header> -->
+    <ng-container *ngIf="!startCheckIn">
+        <div class="container">
+            <div class="welcome-message">
+                <h1>Welcome to Telecliniq Pods</h1>
+                <h2>Are you using Kiosk for yourself or Someone else today ? </h2>
+                <div class="button-row">
+                    <button class="start-button" (click)="startIdentify()">MySelf</button>
+                    <button class="start-button">Someone Else</button>
+                </div>
+               <!-- <p>Press Start to Begin </p> <button class="start-button" (click)="startCheckin()">Start</button> -->
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="checkinForYourself">
+        <div class="container">
+            <div class="welcome-message">
+                <h1>Are you using Kiosk for yourself or Someone else today ? </h1>
+                <div class="button-row">
+                    <button class="start-button" (click)="startIdentify()">MySelf</button>
+                    <button class="start-button">Someone Else</button>
+                </div>
+                
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="identifyScreen">
+        <section class="headingbg">
+            <h1 class="mb-0 text-center">Identify Yourself</h1>
+        </section>
+        <div class="container-fluid custom-width mt-5">
+            <div class="row">
+                <div class="col-4 my-auto license">
+                    <a href="#">
+                    <img src="../assets/images/driver.svg" alt="License" class="img-fluid" style="width: 87%">
+                    Please Swipe Visa, Master card or Driving/insurance card to Identify yourself</a>
+                </div>
+                <div class="col-6 my-auto offset-2">
+                    <div class="manually">
+                    <form [formGroup]="formGrp">
+                    <div class="p-5">
+                        <h2 class="mb-5 text-center">Proceed Manually</h2>
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <label for="">Full Name</label>
+                                <!-- add this pipe for keyboard: appOskInput -->
+                                <input pInputText type="text" class="form-control" formControlName="fullname" placeholder="eg: John Doe" 
+                                [ngClass]="formGrp.get('fullname')?.invalid && (formGrp.get('fullname')?.dirty || formGrp.get('fullname')?.touched) ? 'ng-invalid ng-dirty' : ''">
+                                <div *ngIf="formGrp.get('fullname')?.invalid && (formGrp.get('fullname')?.dirty || formGrp.get('fullname')?.touched)" class="alert alert-danger">
+                                    <div *ngIf="formGrp.get('fullname')?.errors?.['required']">Name is required.</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label for="">DOB</label>
+                                <!-- <input type="text" class="form-control" formControlName="dob" placeholder="dd/mm/yyyy"> -->
+                                <p-calendar formControlName="dob" placeholder="mm/dd/yyyy"  [ngClass]="formGrp.get('dob')?.invalid && (formGrp.get('dob')?.dirty || formGrp.get('dob')?.touched) ? 'ng-invalid ng-dirty' : ''"></p-calendar>
+                                <div *ngIf="formGrp.get('dob')?.invalid && (formGrp.get('dob')?.dirty || formGrp.get('dob')?.touched)" class="alert alert-danger">
+                                    <div *ngIf="formGrp.get('dob')?.errors?.['required']">DoB is required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="">Gender</label>
+                                <p-dropdown formControlName="gender" [options]="genderOptions" optionLabel="name" placeholder="Select Gender"></p-dropdown>
+                                <!-- <select class="form-select" aria-label="Default select example" formControlName="gender">
+                                    <option value="1">Male</option>
+                                    <option value="2">Female</option>
+                                    <option value="3">Other</option>
+                                  </select> -->
+                            </div>
+                            <div class="col-6">
+                                <label for="">Email Id</label>
+                                <input type="text" pInputText class="form-control" formControlName="email" placeholder="Eg. test@gmail.com">
+                                <div *ngIf="formGrp.get('email')?.invalid && (formGrp.get('email')?.dirty || formGrp.get('email')?.touched)" class="alert alert-danger">
+                                    <div *ngIf="formGrp.get('email')?.errors?.['required']">Email is required.</div>
+                                    <div *ngIf="formGrp.get('email')?.errors?.['email']">Email is invalid.</div>
+                                </div>
+                            </div>
+                        </div>
+                      <div class="text-center mt-5">
+                        <p-button label="Search" (onClick)="onSearch()" [disabled]="!formGrp.valid"></p-button>
+                    </div>  
+                    
+                </div>
+            </form>
+                </div>
+                    
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>
+

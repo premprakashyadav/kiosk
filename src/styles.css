@@ -1,6 +1,23 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'font-awesome/css/font-awesome.min.css';
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
 /* You can add global styles to this file, and also import other style files */
 .form-signin {
-    width:100%;
+  width: 100%;
   max-width: 330px;
   padding: 15px;
   margin: auto;
@@ -20,4 +37,179 @@
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.rightbox h3 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #2c2d3f;
+}
+
+.rightbox ul li {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.rightbox ul li i {
+  font-size: 2rem;
+  color: #be2128;
+  vertical-align: middle;
+}
+
+.rightbox h3 span {
+  color: #0b59a3;
+}
+
+.rightbox ul li::marker {
+  color: #be2128;
+}
+
+.rightbox ul li {
+  font-size: 1.8rem;
+  font-weight: 500;
+
+}
+
+.counter h4 {
+  font-size: 5rem;
+  line-height: 8rem;
+  color: #be2128;
+}
+
+.counter {
+  background: #dfc1c2;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  text-align: center;
+  border: 1px solid #cc9a9b;
+  animation-name: pulse;
+  animation-duration: 1.3s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  margin-top: 6rem;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(198, 30, 41, 0.5);
+  }
+
+  80% {
+    box-shadow: 0 0 0 14px rgba(10, 88, 165, 0);
+  }
+}
+
+.myweight {
+  /* border: 1px solid #ccc; */
+  border-radius: 1rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background: #fff;
+  display: none;
+}
+
+.myweight h2 {
+  font-size: 6rem;
+  color: #2cbecb;
+  text-shadow: 2px 2px 2px #0b59a3;
+  font-weight: 700;
+}
+
+.myweight h3 {
+  font-size: 3.5rem;
+  color: #0a58a5;
+}
+
+.myweight h4 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.myweight ul li {
+  display: inline-block;
+  justify-content: space-around;
+}
+
+.myweight ul li a {
+  background: #0b59a3;
+  font-size: 1.6rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  margin: 0 2rem;
+  margin-top: 3rem;
+  display: block;
+  border-radius: 8rem;
+  border: 1px solid #fff;
+  transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.myweight ul li a:hover {
+  border: 1px solid #0b59a3;
+  background: #fff;
+  color: #0b59a3;
+  transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.myweight .continue {
+  background: #be2128 !important;
+}
+
+.myweight .continue:hover {
+  background: #fff !important;
+  border: 1px solid #be2128 !important;
+  color: #be2128 !important;
+}
+
+
+.block {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.myweight {
+  display: block;
+}
+
+.p-dropdown,
+.p-calendar {
+  width: 100%;
+  border-radius: 6px;
+  height: 5rem;
+  font-size: 1.6rem;
+}
+
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item,
+.p-dropdown .p-dropdown-label,
+.p-calendar .p-inputtext {
+  font-size: 1.6rem;
+}
+
+.p-datepicker table td>span {
+  font-size: 15px;
+
+}
+
+.p-link {
+  font-size: 1.8rem;
+}
+
+.p-button {
+  background: #2679bc;
+  color: #fff;
+  border: 0;
+  font-size: 1.8rem;
+  padding: 1rem 3rem;
+  border: 0;
+
+
 }

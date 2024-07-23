@@ -1,0 +1,35 @@
+<div class="tab-pane fade show active" id="weight" role="tabpanel" aria-labelledby="weight-tab">
+    <div class="block">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-md-4 my-auto">
+                  <img src="assets/images/weighing-machine.svg" alt="" class="img-fluid">
+              </div>
+              <div class="col-md-6 offset-1 my-auto">
+                  <div class="rightbox" *ngIf="!showWeight">
+                    <h3 class="mb-4">Please follow the instructions <span class="d-block">to proceed the test</span></h3>
+                    <ul class="list-unstyled mt-5">
+                      <li><i class="fa-solid fa-check me-3"></i>Sit up the straight and put your feet on the pedal.</li>
+                      <li><i class="fa-solid fa-check me-3"></i>Please do not lean on the column to avoid the affecting the measurement.</li>
+                      <!-- <li> Press <a  (click)="checkWeight()" class="continue">Continue</a> When you are ready</li> -->
+                    </ul>
+                    <p class="mt-5">Press<a  (click)="checkWeight()" class="continue">Continue</a> When you are ready</p>
+                    <!-- <div class="counter">
+                      <h4 id="seconds" class="mb-0">10</h4>
+                    </div> -->
+                  </div>
+                  <div *ngIf="showWeight" class="myweight p-5 text-center">
+                    <h3 class="text-center mb-5">Weight Result</h3>
+                    <h4 class="mt-5"><b>Your Weight is</b></h4>
+                    <h2 class="text-uppercase">55.7 kg</h2>
+                    <ul class="list-unstyled">
+                      <li><a href="#">Restart</a></li>
+                      <li><a href="/vitals/temprature"  class="continue">Continue</a></li>
+                      <li><a href="#">End</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>

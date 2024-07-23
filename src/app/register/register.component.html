@@ -1,4 +1,4 @@
-<form class="form-signin" [formGroup]='registerForm' (submit)="register()">
+<!-- <form class="form-signin" [formGroup]='registerForm' (submit)="register()">
     <h1 class="h3 mb-3 fw-normal">Register</h1>
   
     <div class="form-floating">
@@ -12,6 +12,29 @@
     <button class="w-100 btn btn-lg btn-primary" type="submit" [disabled]="!registerForm.valid">Register</button>
     <br>
     <br>
+    <p> Alreday Registered ? Please <a href="/login">Login</a></p>
     <div *ngIf="success" style="color: green;">Registration Successful!! Please <a routerLink="/login">Login</a></div>
     <p *ngIf="errMessage" class="alert alert-danger alert-dismissible fade show">{{errMessage}}</p>
-</form>
+</form> -->
+
+<div class="loginwrapper">
+  <div class="loginbg p-5">
+    <!-- <form  [formGroup]='registerForm' (submit)="register()">
+      <h1 class=" mb-4 text-center">Register</h1>
+    
+      <div class="mb-4">
+        <input type="text" class="form-control" id="floatingPassword" placeholder="Username" formControlName="username">
+      </div>
+      <div class="mb-4">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password">
+      </div>
+      <div class="mb-4">
+        <input type="number" class="form-control" id="floatingPhone" placeholder="Phone number" formControlName="phone">
+      </div>
+      <button class="w-100 btn btn-primary text-uppercase py-3" type="submit" [disabled]="!registerForm.valid">Register</button>
+      <p>Already Registered? , Please <a href="/login">Login</a></p>
+      <p *ngIf="message" class="alert alert-danger alert-dismissible fade show">{{message}}</p> 
+    </form> -->
+  </div>
+  </div>
+  

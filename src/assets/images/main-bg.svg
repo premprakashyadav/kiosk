@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X5 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="24mm" height="18mm" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 24 18"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#68A3B7;stroke-width:0.0847}
+    .fil9 {fill:none}
+    .fil8 {fill:#5999AB}
+    .fil7 {fill:#A9D7FF}
+    .fil5 {fill:#B6D5FB}
+    .fil6 {fill:#B6D7FD}
+    .fil3 {fill:#C4D3F7}
+    .fil1 {fill:#C5D4F7}
+    .fil4 {fill:#C6D7F8}
+    .fil2 {fill:#CCD6F7}
+    .fil0 {fill:url(#id0)}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="16.8662" y1="16.2965" x2="7.1338" y2="1.7035">
+   <stop offset="0" style="stop-color:#AFDDFF"/>
+   <stop offset="1" style="stop-color:#D5DAF8"/>
+  </linearGradient>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" width="24" height="18"/>
+  <g id="_429795504">
+   <rect id="_429719216" class="fil1" x="2.9305" width="0.039" height="17.9919"/>
+   <rect id="_431344848" class="fil2" x="5.9305" width="0.039" height="17.9919"/>
+   <rect id="_431344464" class="fil3" x="8.9305" width="0.039" height="17.9919"/>
+   <rect id="_430981072" class="fil4" x="11.9698" y="0.00399086" width="0.039" height="17.9919"/>
+   <rect id="_431344536" class="fil5" x="14.9923" y="0.00807909" width="0.039" height="17.9919"/>
+   <rect id="_431031504" class="fil6" x="17.9923" y="0.00807909" width="0.039" height="17.9919"/>
+   <rect id="_87687808" class="fil7" x="21.0282" y="0.00807909" width="0.039" height="17.9919"/>
+  </g>
+  <g id="_431354704">
+   <rect id="_431018640" class="fil8" transform="matrix(0.693615 -1.62032 2.03159 0.869668 18.3536 4.71749)" width="0.1901" height="0.0165" rx="0.0182" ry="0.0182"/>
+   <rect id="_431344776" class="fil8" transform="matrix(-1.62032 -0.693615 0.869668 -2.03159 18.583 4.65338)" width="0.1901" height="0.0165" rx="0.0182" ry="0.0182"/>
+  </g>
+  <g id="_428996440">
+   <rect id="_429410928" class="fil8" transform="matrix(0.693615 -1.62032 2.03159 0.869668 20.975 11.7296)" width="0.1901" height="0.0165" rx="0.0182" ry="0.0182"/>
+   <rect id="_432152368" class="fil8" transform="matrix(-1.62032 -0.693615 0.869668 -2.03159 21.2044 11.6655)" width="0.1901" height="0.0165" rx="0.0182" ry="0.0182"/>
+  </g>
+  <g id="_431031624">
+   <rect id="_429411720" class="fil8" transform="matrix(0.693615 -1.62032 2.03159 0.869668 11.8944 13.9462)" width="0.1901" height="0.0165" rx="0.0182" ry="0.0182"/>
+   <rect id="_429411456" class="fil8" transform="matrix(-1.62032 -0.693615 0.869668 -2.03159 12.1238 13.8821)" width="0.1901" height="0.0165" rx="0.0182" ry="0.0182"/>
+  </g>
+  <g id="_429411312">
+   <rect id="_429412080" class="fil8" transform="matrix(1.62375 -0.685562 0.859572 2.03588 2.10966 14.9235)" width="0.1901" height="0.0165" rx="0.0182" ry="0.0182"/>
+   <rect id="_430849264" class="fil8" transform="matrix(-0.685562 -1.62375 2.03588 -0.859572 2.31937 15.0366)" width="0.1901" height="0.0165" rx="0.0182" ry="0.0182"/>
+  </g>
+  <g id="_429412200">
+   <rect id="_431018352" class="fil8" transform="matrix(1.03335 -1.42784 1.79025 1.29564 1.85647 10.7182)" width="0.1901" height="0.0165" rx="0.0182" ry="0.0182"/>
+   <rect id="_431058128" class="fil8" transform="matrix(-1.42784 -1.03335 1.29564 -1.79025 2.09439 10.7061)" width="0.1901" height="0.0165" rx="0.0182" ry="0.0182"/>
+  </g>
+  <g id="_431012424">
+   <rect id="_432042240" class="fil8" transform="matrix(1.03335 -1.42784 1.79025 1.29564 5.84987 4.74935)" width="0.1901" height="0.0165" rx="0.0182" ry="0.0182"/>
+   <rect id="_432042552" class="fil8" transform="matrix(-1.42784 -1.03335 1.29564 -1.79025 6.08779 4.73733)" width="0.1901" height="0.0165" rx="0.0182" ry="0.0182"/>
+  </g>
+  <circle class="fil9 str0" cx="20.4129" cy="5.943" r="0.124"/>
+  <circle class="fil9 str0" cx="21.7931" cy="8.7604" r="0.124"/>
+  <circle class="fil9 str0" cx="23.4839" cy="13.2379" r="0.124"/>
+  <circle class="fil9 str0" cx="18.0726" cy="13.8456" r="0.124"/>
+  <circle class="fil9 str0" cx="8.9612" cy="15.0737" r="0.124"/>
+  <circle class="fil9 str0" cx="5.9216" cy="13.1337" r="0.124"/>
+  <circle class="fil9 str0" cx="2.9305" cy="6.7701" r="0.124"/>
+ </g>
+</svg>

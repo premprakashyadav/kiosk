@@ -1,0 +1,150 @@
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    /* background: url(../../../assets/images/main-bg.svg) no-repeat; */
+    background-size: cover;
+    background-position: top;
+    background: #f0f5f8;
+}
+
+header {
+    padding: 3rem 1rem 2rem 1rem;
+    margin-bottom: 20rem;
+    background: #fff;
+}
+
+.headingbg {
+    padding-top: 13rem;
+}
+
+.headingbg h1 {
+    color: #002d8a;
+    font-size: 2.8rem;
+}
+
+.manually {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #ccc;
+    box-sizing: border-box;
+
+}
+
+.manually h2 {
+    font-size: 2.3rem;
+    color: #002d8a;
+    font-weight: 600;
+}
+
+
+.manually ul li {
+    line-height: 2.3;
+    font-size: 1.6rem;
+}
+
+.manually ul li span {
+    font-weight: 600;
+    margin-right: 1rem;
+}
+
+
+label {
+    margin-bottom: 0.5rem;
+}
+
+.form-select,
+.form-control {
+    height: 5rem;
+    font-size: 1.5rem;
+    /* box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white; */
+}
+
+input::placeholder {
+    color: gray;
+}
+
+.custom-width {
+    width: 95%;
+}
+
+.btn-secondary {
+    background: #2679bc;
+    color: #fff;
+    border-radius: 10px;
+    border: 0;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+}
+
+.btn-secondary:focus,
+.btn-secondary:hover {
+    background: #43ae5c;
+    color: #fff;
+
+}
+
+textarea {
+    height: auto !important;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 2rem;
+    color: #19478b;
+}
+
+.proceed-btn {
+    margin-top: 20%;
+    float: right;
+}
+
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f0f5f8, #d3dbe0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    margin-top: 80px;
+    text-align: center;
+    padding: 50px 30px;
+    background-color: #f0f5f8;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.welcome-message h1 {
+    margin: 0 0 30px 0;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.start-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.start-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.start-button:active {
+    background-color: #004494;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+}

@@ -1,0 +1,105 @@
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    background: url(../../../assets/images/main-bg.svg) no-repeat;
+    background-size: cover;
+    background-position: top;
+    background: #f0f5f8;
+}
+
+header {
+    padding: 3rem 1rem 2rem 1rem;
+    margin-bottom: 20rem;
+    background: #fff;
+}
+
+.headingbg {
+    padding-top: 13rem;
+}
+
+.headingbg h1 {
+    color: #002d8a;
+    font-size: 2.8rem;
+}
+
+.btn-primary {
+    background: #2679bc;
+    color: #fff;
+    border-radius: 10px;
+    border: 0;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+}
+
+.btn-primary:hover {
+    background: #43ae5c;
+}
+
+.manually {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #ccc;
+}
+
+.manually h2 {
+    font-size: 2.3rem;
+    color: #002d8a;
+    font-weight: 600;
+}
+
+.manually ul li {
+    line-height: 2.3;
+    font-size: 1.6rem;
+}
+
+.manually ul li span {
+    font-weight: 600;
+    margin-right: 1rem;
+}
+
+.manually h2 {
+    font-size: 1.8rem;
+    background: #19478b;
+    color: #fff;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+label {
+    margin-bottom: 0.5rem;
+}
+
+.form-select,
+.form-control {
+    height: 5rem;
+    font-size: 1.5rem;
+}
+
+.custom-width {
+    width: 95%;
+}
+
+.btn-secondary {
+    background: #2679bc;
+    color: #fff;
+    border-radius: 10px;
+    border: 0;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+}
+
+.btn-secondary:focus,
+.btn-secondary:hover {
+    background: #43ae5c;
+    color: #fff;
+
+}
+
+textarea {
+    height: auto !important;
+}
+
+.p-calendar {
+    width: 100% !important;
+}

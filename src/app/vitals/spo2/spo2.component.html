@@ -1,0 +1,36 @@
+<div class="tab-pane" id="oxygen" role="tabpanel" aria-labelledby="oxygen-tab">
+    <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-md-4 my-auto">
+              <img src="assets/images/oxygen-level.svg" alt="" class="img-fluid">
+          </div>
+          <div class="col-md-6 offset-1 my-auto">
+              <div class="rightbox" id="instruction" *ngIf="!showResults">
+                <h3 class="mb-4">Please follow the instructions <span class="d-block">to proceed the test</span></h3>
+                <ul class="list-unstyled mt-5">
+                  <li><i class="fa-solid fa-check me-3"></i>Insert your finger into the machine</li>
+                  <li><i class="fa-solid fa-check me-3"></i>Wait for the result.</li>
+                  <li><i class="fa-solid fa-check me-3"></i>If cant get result, restart the thumb test.</li>
+                  <!-- <li> Press <a id="height-tab" data-bs-toggle="pill" data-bs-target="#height" type="button" role="tab" (click)="checkResults()"
+                    aria-controls="height" aria-selected="false" class="continue">Continue</a> When you are ready</li> -->
+                </ul>
+                <p class="mt-5">Press<a (click)="checkResults()" class="continue">Continue</a> When you are ready</p>
+                <!-- <div class="counter">
+                  <h4 id="seconds" class="mb-0">10</h4>
+                </div> -->
+              </div>
+              <div *ngIf="showResults" class="myweight p-5 text-center" id="myweight">
+                <h3 class="text-center mb-5">Spo2 Result</h3>
+                <h4 class="mt-5"><b>Your Spo2 is</b></h4>
+                <h2 class="text-uppercase">175.5</h2>
+                <h5>CM</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#">Restart</a></li>
+                  <li><a href="#" id="height-tab" data-bs-toggle="pill" data-bs-target="#height" type="button" role="tab" aria-controls="height" aria-selected="false" class="continue">Continue</a></li>
+                  <li><a href="#">End</a></li>
+                </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>

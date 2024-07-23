@@ -1,0 +1,58 @@
+<div class="wrapper">
+   
+    <!-- <section class="headingbg">
+        <h1 class="mb-0 text-center">Verification</h1>
+    </section>
+    <div class="container-fluid custom-width mt-5">
+        <div class="row">
+           
+            <div class="col-6 mx-auto">
+                <div class="manually">
+                <div class="p-5">
+                    <div class="row mb-3">
+                        <div class="col-12 text-center">
+                            <div class="form-group">
+                                <label for="" class="mb-3">Please verify yourself with OTP send on mobile and Email</label>
+                                <input type="text" pInputText pKeyFilter="num" class="form-control" placeholder="Enter OTP" [formControl]="otp">
+                               </div>
+                               <div>
+                                <p-button label="Verify" (onClick)="verifyOtp()"></p-button>
+                            </div> 
+                              
+                        </div>
+                        
+                    </div>
+                
+                  
+                
+            </div>
+            </div>
+                
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container">
+        <div class="verification-step">
+            <h1>We found you in the system</h1>
+            <p>Please choose a verification method:</p>
+            <div class="button-row">
+                <button class="verify-button" (click)="verifyThroughMobile()">Verify through Mobile</button>
+                <button class="verify-button" (click)="enterSecurityQuestion()">Enter Security Question</button>
+            </div>
+            <ng-container class="otp-section" *ngIf="showOTPSection">
+                <p>We have sent an OTP to your mobile. Please enter it below:</p>
+                <input id="otp" type="text" [(ngModel)]="otp" placeholder="Enter OTP">
+                <button class="submit-button" (click)="submitOTP()">Submit</button>
+            </ng-container>
+            <ng-container class="security-question-section" *ngIf="showSecurityQuestionSection">
+                <p>Please answer the following security question:</p>
+                <p id="securityQuestion">{{ securityQuestion }}</p>
+                <input id="security-q" type="text" [(ngModel)]="securityAnswer" placeholder="Enter your answer">
+                <button class="submit-button" (click)="submitSecurityAnswer()">Submit</button>
+            </ng-container>
+        </div>
+    </div>
+    
+</div>
+

@@ -1,0 +1,108 @@
+<!-- <section class="billingbg">
+<div class="container">
+    <div class="row">
+        <div class="col-md-7">
+            <div class="billinfo p-5">
+                <h2 class="mb-5">Billing Details</h2>
+                <div class="form-group mb-4">
+                    <label for="">Full Name</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group mb-4">
+                    <label for="">Email</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group mb-4">
+                    <label for="">Country or Region</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group mb-4">
+                    <label for="">Address</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="billinfo p-5">
+                <h2 class="mb-5">Card Details</h2>
+                <div class="form-group mb-4">
+                    <label for="">Card Number</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group mb-4 row">
+                    <div class="col-md-6">
+                        <label for="">Expiry Date</label>
+                        <input type="text" class="form-control" placeholder="MM/YY">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="">CVV</label>
+                        <input type="text" class="form-control">
+                    </div>
+                  
+                </div>
+            
+             <p-button label="Pay Now" class="btn btn-secondary w-100 py-4 mt-3" (onClick)="pay()"></p-button>
+            </div>
+        </div>
+    </div>
+</div>
+</section> -->
+
+<div class="wrapper">
+    <div class="container">
+        <div class="payment-page">
+            <h1>Payment Information</h1>
+            <div class="payment-methods">
+                <div class="payment-method" [class.selected]="paymentMethod === 'credit'" (click)="selectPaymentMethod('credit')">
+                    Credit Card
+                </div>
+                <div class="payment-method" [class.selected]="paymentMethod === 'debit'" (click)="selectPaymentMethod('debit')">
+                    Debit Card
+                </div>
+                <div class="payment-method" [class.selected]="paymentMethod === 'pos'" (click)="selectPaymentMethod('pos')">
+                    POS Swipe
+                </div>
+                <div class="payment-method" [class.selected]="paymentMethod === 'upi'" (click)="selectPaymentMethod('upi')">
+                    UPI Payment
+                </div>
+            </div>
+    
+            <div *ngIf="paymentMethod === 'credit' || paymentMethod === 'debit'" class="card-details">
+                <h2>{{ paymentMethod | titlecase }} Card Details</h2>
+                <form (ngSubmit)="submitPayment()">
+                    <div class="form-group">
+                        <label for="cardName">Name on Card</label>
+                        <input type="text" id="cardName" [(ngModel)]="paymentDetails.cardName" name="cardName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" [(ngModel)]="paymentDetails.cardNumber" name="cardNumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expiryDate">Expiry Date</label>
+                        <input type="text" id="expiryDate" [(ngModel)]="paymentDetails.expiryDate" name="expiryDate" placeholder="MM/YY" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" [(ngModel)]="paymentDetails.cvv" name="cvv" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="submit-button">Submit Payment</button>
+                    </div>
+                </form>
+            </div>
+    
+            <div *ngIf="paymentMethod === 'pos'" class="pos-details">
+                <h2>POS Swipe</h2>
+                <p>Please swipe your card at the POS terminal to complete the payment.</p>
+            </div>
+    
+            <div *ngIf="paymentMethod === 'upi'" class="upi-details">
+                <h2>UPI Payment</h2>
+                <p>Scan the QR code below to complete the payment via UPI.</p>
+                <img src="assets/upi-qr-code.png" alt="UPI QR Code">
+            </div>
+        </div>
+    </div>
+</div>
+

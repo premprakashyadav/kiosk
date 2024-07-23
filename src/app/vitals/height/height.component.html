@@ -1,0 +1,34 @@
+<div class="tab-pane" id="height" role="tabpanel" aria-labelledby="height-tab">
+    <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-md-4 my-auto">
+              <img src="assets/images/height-measuring.svg" alt="" class="img-fluid">
+          </div>
+          <div class="col-md-6 offset-1 my-auto">
+              <div class="rightbox" id="instruction" *ngIf="!showWeight">
+                <h3 class="mb-4">Please follow the instructions <span class="d-block">to proceed the test</span></h3>
+                <ul class="list-unstyled mt-5">
+                  <li><i class="fa-solid fa-check me-3"></i>Align your toe to the red line.</li>
+                  <li><i class="fa-solid fa-check me-3"></i>Stand up staright and look ahead.</li>
+                  
+                </ul>
+                <p class="mt-5">Press<a (click)="checkWeight()" class="continue">Continue</a> When you are ready</p>
+                <!-- <div class="counter">
+                  <h4 id="seconds" class="mb-0">10</h4>
+                </div> -->
+              </div>
+              <div *ngIf="showWeight"class="myweight p-5 text-center" id="myweight">
+                <h3 class="text-center mb-5">Height Result</h3>
+                <h4 class="mt-5"><b>Your Height is</b></h4>
+                <h2 class="text-uppercase">175.5</h2>
+                <h5>CM</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#">Restart</a></li>
+                  <li><a href="/vitals/spo2" id="height-tab" data-bs-toggle="pill" data-bs-target="#height" type="button" role="tab" aria-controls="height" aria-selected="false" class="continue">Continue</a></li>
+                  <li><a href="#">End</a></li>
+                </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>

@@ -1,0 +1,23 @@
+.rightbox p a {
+    font-size: 1.6rem;
+    color: #fff;
+    text-decoration: none;
+    background: #6ab182;
+    padding: 1rem 3rem;
+    margin: 0 1rem;
+    border-radius: 8rem;
+    border: 1px solid #6ab182;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.rightbox p a:hover {
+    background: #2d7abd;
+    border: 1px solid #2d7abd;
+    color: #fff;
+}
+
+.rightbox p {
+    font-size: 1.8rem;
+    font-weight: 500;
+}

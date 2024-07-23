@@ -1,0 +1,158 @@
+.billingbg {
+    background: #e7eff6;
+    width: 100%;
+    height: 100vh;
+    padding: 3rem;
+}
+
+.billinfo {
+    margin-top: 10%;
+    background: #fff;
+    height: 100%;
+}
+
+label {
+    margin-bottom: 0.6rem;
+}
+
+.form-control {
+    height: 4rem;
+}
+
+::placeholder {
+    font-size: 1.5rem;
+}
+
+.btn-secondary {
+    font-size: 1.6rem;
+    background: #106493;
+    border: 0;
+}
+
+.btn-secondary:hover {
+    background: #26acc7;
+}
+
+.billinfo h2 {
+    font-weight: 600;
+    color: #116a88;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    /* background: url(../../../assets/images/main-bg.svg) no-repeat; */
+    background: #f0f5f8;
+    background-size: cover;
+    background-position: top;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f0f5f8, #d3dbe0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    margin-top: 80px;
+    text-align: center;
+    padding: 50px 30px;
+    background-color: #f0f5f8;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.payment-page h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+.payment-methods {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.payment-method {
+    padding: 20px;
+    font-size: 1.2em;
+    color: #666;
+    background-color: #f0f0f0;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.payment-method.selected {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* .payment-method:hover {
+    background-color: #007bff;
+    transform: scale(1.02);
+} */
+
+.card-details, .pos-details, .upi-details {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.card-details h2, .pos-details h2, .upi-details h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group label {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.form-group input {
+    padding: 10px;
+    font-size: 1em;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.submit-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.submit-button:active {
+    background-color: #004494;
+}

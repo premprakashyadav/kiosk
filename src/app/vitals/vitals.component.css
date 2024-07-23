@@ -1,0 +1,220 @@
+.nav-pills .nav-link {
+    border-radius: 0;
+    padding: 2.3rem 2rem;
+    font-size: 1.7rem;
+    color: #fff;
+    border: 1px solid #fff;
+    border-bottom: 0;
+    border-top: 0;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background: #2d7cc1;
+    /* transform: scale(1.1); */
+    /* border-radius: 1.1rem; */
+    /* border: 2px solid #fff; */
+    border-bottom: 0;
+    /* border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem; */
+}
+
+.nav-pills {
+    background: #b4b9cd;
+    border: 2px solid #fff;
+    border-bottom: 0;
+}
+
+.nav-pills .nav-link:hover {
+    background: #2d7cc1;
+}
+
+.bgcolor {
+    background: #f0f5f8;
+    height: 100vh;
+    width: 100%;
+    padding-top: 10rem;
+
+}
+
+.rightbox h3 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #2c2d3f;
+}
+
+.rightbox ul li {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.rightbox ul li i {
+    font-size: 2rem;
+    color: #be2128;
+    vertical-align: middle;
+}
+
+.rightbox ul li a {
+    color: #0a58a5;
+    text-decoration: none;
+}
+
+.rightbox h3 span {
+    color: #0b59a3;
+}
+
+.rightbox ul li::marker {
+    color: #be2128;
+}
+
+.rightbox ul li {
+    font-size: 1.8rem;
+    font-weight: 500;
+
+}
+
+.counter h4 {
+    font-size: 5rem;
+    line-height: 8rem;
+    color: #be2128;
+}
+
+.counter {
+    background: #dfc1c2;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    text-align: center;
+    border: 1px solid #cc9a9b;
+    animation-name: pulse;
+    animation-duration: 1.3s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    margin-top: 6rem;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(198, 30, 41, 0.5);
+    }
+
+    80% {
+        box-shadow: 0 0 0 14px rgba(10, 88, 165, 0);
+    }
+}
+
+.myweight {
+    /* border: 1px solid #ccc; */
+    border-radius: 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background: #fff;
+    display: none;
+}
+
+.myweight h2 {
+    font-size: 6rem;
+    color: #2cbecb;
+    text-shadow: 2px 2px 2px #0b59a3;
+    font-weight: 700;
+}
+
+.myweight h3 {
+    font-size: 3.5rem;
+    color: #0a58a5;
+}
+
+.myweight h4 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.myweight ul li {
+    display: inline-block;
+    justify-content: space-around;
+}
+
+.myweight ul li a {
+    background: #0b59a3;
+    font-size: 1.6rem;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    margin: 0 2rem;
+    margin-top: 3rem;
+    display: block;
+    border-radius: 8rem;
+    border: 1px solid #fff;
+    transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.myweight ul li a:hover {
+    border: 1px solid #0b59a3;
+    background: #fff;
+    color: #0b59a3;
+    transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.myweight .continue {
+    background: #be2128 !important;
+}
+
+.myweight .continue:hover {
+    background: #fff !important;
+    border: 1px solid #be2128 !important;
+    color: #be2128 !important;
+}
+
+
+.block {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#myweight {
+    display: none;
+}
+
+/* btn design */
+.btn-design ul {
+    width: 100%;
+    display: inline-flex;
+}
+
+.btn-design ul li {
+    display: inline-block;
+    justify-content: space-between;
+    width: 25%;
+}
+
+.btn-design ul li a {
+    background: #b9bccf;
+    width: 25%;
+    display: table-cell;
+    padding: 2.3rem 1rem;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: 500;
+    border-top: 5px solid #b9bccf;
+
+}
+
+.btn-design ul li a:hover {
+    background: #0a58a5;
+    border-top: 5px solid #53bf64;
+}
+
+.btn-design ul li a.active {
+    background: #0a58a5;
+    border-top: 5px solid #53bf64;
+}
