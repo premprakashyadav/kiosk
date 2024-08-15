@@ -39,6 +39,10 @@ import { OskInputDirective } from './keyboard/osk-input.directive';
 import { KeyboardKeyDirective } from './keyboard/keyboard-key.directive';
 import { KeyboardService } from './keyboard/keyboard.service';
 import { KeyboardComponent } from './keyboard/keyboard.component';
+import { loggingInterceptor } from './interceptors/logging.interceptor';
+import { headersInterceptor } from './interceptors/headers.interceptor';
+import { errorInterceptor } from './interceptors/error.interceptor';
+import { spinnerInterceptor } from './interceptors/spinner.interceptor';
 
 @NgModule({
   declarations: [
@@ -86,7 +90,11 @@ import { KeyboardComponent } from './keyboard/keyboard.component';
     CheckboxModule
   ],
   providers: [
-    {provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true},
+    {provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor,multi:true},
+    {provide: HTTP_INTERCEPTORS, useValue : loggingInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useValue : headersInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useValue : errorInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useValue : spinnerInterceptor, multi: true},
     KeyboardService
   ],
   //entryComponents: [OnScreenKeyboardComponent],
