@@ -90,7 +90,11 @@ import {WebcamModule} from 'ngx-webcam';
     WebcamModule,
   ],
   providers: [
-    {provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true},
+    {provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor,multi:true},
+    {provide: HTTP_INTERCEPTORS, useValue : loggingInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useValue : headersInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useValue : errorInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useValue : spinnerInterceptor, multi: true},
     KeyboardService
   ],
   //entryComponents: [OnScreenKeyboardComponent],
