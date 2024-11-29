@@ -1,5 +1,8 @@
 <div class="wrapper">
-   
+    <img  src="../../../assets/images/identify_patients/undraw_fill_form_re_cwyf.png" alt="Image 1"
+    class="image-bottom-right">
+<img src="../../../assets/images/identify_patients/Dot matrix.png" alt="Image 2"
+    class="image-center-left">
     <!-- <section class="headingbg">
         <h1 class="mb-0 text-center">Consent</h1>
     </section>
@@ -29,33 +32,79 @@
         </div>
     </div> -->
 
-    <div class="container">
-        <div class="consent-step">
-            <h1>Consent Form</h1>
-            <p>Please read the following consent form carefully.</p>
-            
-            <div class="consent-text">
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <div class="consent-step" style="max-width: 700px; text-align: center; padding: 20px; width: 100%;">
+            <h1 style="font-size: 36px; font-weight: 600; margin-bottom: 15px; color: #226AB2;">Consent Form</h1>
+            <p style="font-size: 16px; color: #6c757d; margin-bottom: 30px;">
+                Please read the following consent form carefully.
+            </p>
+
+            <div class="consent-text" style="text-align: left; line-height: 1.6; font-size: 16px; color: #4a4a4a;">
                 <p>
                     <strong>Consent for Treatment</strong><br>
-                    I hereby authorize [Hospital Name] and its healthcare providers to provide treatment and care as deemed necessary for my health and well-being. This includes but is not limited to diagnostic procedures, medical treatments, and consultations.
+                    I hereby authorize [Hospital Name] and its healthcare providers to provide treatment and care as
+                    deemed necessary for my health and well-being. This includes but is not limited to diagnostic
+                    procedures, medical treatments, and consultations.
                 </p>
                 <p>
                     <strong>Use of Personal Information</strong><br>
-                    I understand that my personal and medical information will be kept confidential and used solely for the purpose of providing medical care. However, I consent to the sharing of my information with insurance companies and other healthcare providers as necessary.
+                    I understand that my personal and medical information will be kept confidential and used solely for
+                    the purpose of providing medical care. However, I consent to the sharing of my information with
+                    insurance companies and other healthcare providers as necessary.
                 </p>
                 <p>
                     <strong>Financial Responsibility</strong><br>
-                    I agree to be financially responsible for all charges and fees associated with my treatment. I understand that it is my responsibility to provide accurate insurance information and to follow up on insurance claims and payments.
+                    I agree to be financially responsible for all charges and fees associated with my treatment. I
+                    understand that it is my responsibility to provide accurate insurance information and to follow up
+                    on insurance claims and payments.
                 </p>
             </div>
-    
-            <div class="button-row">
-                <button class="agree-button" (click)="agree()">Agree</button>
-                <button class="disagree-button" (click)="disagree()">Disagree</button>
+
+            <div class="button-row" style="margin-top: 30px; display: flex; gap: 15px; justify-content: center;">
+                <button class="agree-button" (click)="agree()" style="padding: 10px 20px; 
+                           font-size: 16px; 
+                           background-color: #5cb85c; 
+                           color: white; 
+                           border: none; 
+                           border-radius: 50px; 
+                           cursor: pointer; 
+                           transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;">
+                    Agree
+                </button>
+                <button class="disagree-button" (click)="disagree()" style="padding: 10px 20px; 
+                           font-size: 16px; 
+                           background-color: #d9534f; 
+                           color: white; 
+                           border: none; 
+                           border-radius: 50px; 
+                           cursor: pointer; 
+                           transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;">
+                    Disagree
+                </button>
             </div>
+
         </div>
     </div>
-    
-
 </div>
-
+<p-dialog 
+    [(visible)]="isPopupVisible" 
+    [modal]="true" 
+    [closable]="true" 
+    [showHeader]="true" 
+    [baseZIndex]="1000" 
+    styleClass="confirmation-popup">
+    <div class="d-flex flex-column align-items-center p-3">
+        <i 
+            class="pi pi-check-circle" 
+            *ngIf="popupMessage === 'You have agreed to the consent form.'" 
+            style="font-size: 50px; color: green;">
+        </i>
+        <i 
+            class="pi pi-times-circle" 
+            *ngIf="popupMessage === 'You have disagreed to the consent form.'" 
+            style="font-size: 50px; color: red;">
+        </i>
+        <p class="mt-3">{{ popupMessage }}</p>
+    </div>
+    
+</p-dialog>

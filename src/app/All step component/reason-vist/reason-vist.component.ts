@@ -8,6 +8,11 @@ import { Router } from '@angular/router';
 })
 export class ReasonVisitComponent implements OnInit {
   reason: string = '';
+  popupMessage: string = '';
+popupIcon: string = '';
+popupColor: string = '';
+isPopupVisible: boolean = false;
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -15,12 +20,25 @@ export class ReasonVisitComponent implements OnInit {
 
   submitReason() {
     if (this.reason.trim()) {
-      alert(`Reason for visit: ${this.reason}`);
-      // Logic to handle the reason, e.g., send it to the server
-      // After handling, navigate to the next step/page
-      this.router.navigate(['/billing']); // Replace '/next-step' with the actual route
+      this.popupMessage = `Reason for visit submitted successfully: ${this.reason}`;
+      this.popupIcon = 'pi-check-circle'; // Success icon
+      this.popupColor = 'green'; // Success color
+      this.isPopupVisible = true;
+  
+      setTimeout(() => {
+        this.isPopupVisible = false;
+        this.router.navigate(['/billing']); // Navigate after popup
+      }, 3000); // Display popup for 3 seconds
     } else {
-      alert('Please enter a reason for your visit.');
+      this.popupMessage = 'Please enter a reason for your visit.';
+      this.popupIcon = 'pi-times-circle'; // Error icon
+      this.popupColor = 'red'; // Error color
+      this.isPopupVisible = true;
+  
+      setTimeout(() => {
+        this.isPopupVisible = false;
+      }, 3000); // Display popup for 3 seconds
     }
   }
+  
 }

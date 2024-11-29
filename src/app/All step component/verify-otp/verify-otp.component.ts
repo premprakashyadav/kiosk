@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 export class VerifyOtpComponent implements OnInit {
 
   otp1: FormControl = new FormControl();
+  isPopupVisible: boolean = false;
+  displaySuccessPopup: boolean =false;
 
   constructor(private router:Router) { }
 
@@ -41,9 +43,14 @@ export class VerifyOtpComponent implements OnInit {
   }
 
   submitOTP() {
-    // Logic to verify OTP
-    alert(`OTP Submitted: ${this.otp}`);
-    this.router.navigateByUrl('/patient-details');
+    // Show the loading dialog
+    this.isPopupVisible = true;
+
+    // Simulate OTP verification with a timeout for now
+    setTimeout(() => {
+      this.displaySuccessPopup = true;  // Show the success popup after processing
+      this.router.navigateByUrl('/patient-details');  // Navigate to the next page
+    }, 3000);  // 3-second delay for demo purposes, replace with actual API call
   }
 
   submitSecurityAnswer() {

@@ -1,140 +1,71 @@
-<!-- <div class="wrapper">
-  
-    <section class="headingbg">
-        <h1 class="mb-0 text-center">Driving License Details</h1>
-    </section>
-    <div class="container-fluid custom-width mt-5">
-        <div class="row">
-           
-            <div class="col-6 mx-auto">
-                <div class="manually">
-                <div class="p-5">
-                    <div class="row mb-3">
-                        <div class="col-8">
-                            <ul class="list-unstyled">
-                                <li><span>First Name:</span>John</li>
-                                <li><span>Last Name:</span>Doe</li>
-                                <li><span>Email Id:</span>info@advaa.com</li>
-                                <li><span>Date Of Birth:</span> 06 September 1991</li>
-                            </ul>
-                        </div>
-                        <div class="col-4">
-                            <div class="profilepic">
-                                <img src="../assets/images/profile.jpg" alt="Profile" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                  <div class="mt-5">
-                    <p-button label="Proceed" icon="pi pi-forward" (onClick)="proceed()"></p-button>
-                  </div>  
-                
-            </div>
-            </div>
-                
-            </div>
-        </div>
-    </div>
-</div> -->
-
-<!-- <div class="container">
-    <div class="confirmation-step">
-        <h1>Confirmation</h1>
-        <p>Please confirm all the sections below to proceed further:</p>
-
-        <div class="details-row">
-            <div class="detail-section" [class.confirmed]="personalConfirmed">
-                <h2>Personal Details</h2>
-                <p>Name: {{ personalDetails.name }}</p>
-                <p>Date of Birth: {{ personalDetails.dob }}</p>
-                <p>Contact: {{ personalDetails.contact }}</p>
-                <button class="confirm-button" (click)="confirmSection('personal')"
-                        [disabled]="personalConfirmed">Confirm</button>
-                <button class="edit-button" (click)="editSection('personal')">Edit</button>
-            </div>
-            
-            <div class="detail-section" [class.confirmed]="insuranceConfirmed">
-                <h2>Insurance Details</h2>
-                <p>Insurance Provider: {{ insuranceDetails.provider }}</p>
-                <p>Policy Number: {{ insuranceDetails.policyNumber }}</p>
-                <button class="confirm-button" (click)="confirmSection('insurance')"
-                        [disabled]="insuranceConfirmed">Confirm</button>
-                <button class="edit-button" (click)="editSection('insurance')">Edit</button>
-            </div>
-            
-            <div class="detail-section" [class.confirmed]="appointmentConfirmed">
-                <h2>Appointment Details</h2>
-                <p>Doctor: {{ appointmentDetails.doctor }}</p>
-                <p>Date: {{ appointmentDetails.date }}</p>
-                <p>Time: {{ appointmentDetails.time }}</p>
-                <button class="confirm-button" (click)="confirmSection('appointment')"
-                        [disabled]="appointmentConfirmed">Confirm</button>
-                <button class="edit-button" (click)="editSection('appointment')">Edit</button>
-            </div>
-        </div>
-
-        <div *ngIf="allConfirmed" class="proceed-row">
-            <button class="proceed-button" (click)="proceed()">Proceed</button>
-        </div>
-    </div>
-</div> -->
-
-<div class="container">
-    <div class="confirmation-step">
-        <h1>Confirmation</h1>
-        <p>Please confirm the following details:</p>
+<div class="container" style="height: 90vh; display: flex; align-items: center; justify-content: center;">
+    <img src="../../../assets/images/identify_patients/Dot matrix.png" alt="Image 2" class="image-center-left">
+    <div class="confirmation-step bg-white p-4" style="max-width: 650px; width: 100%; border-radius: 10px;">
+        <h1 class="mb-2 fw-bold" style="font-size: 35px; color: #226AB2;">Confirmation</h1>
+        <p class="text-secondary mb-3" style="font-size: 16px;">Please confirm the following details:</p>
 
         <div class="details-column">
-            <div class="detail-section" [class.confirmed]="personalConfirmed">
-                <div class="detail-content">
-                    <div>
-                        <h2>Personal Details</h2>
-                        <p>Name: {{ personalDetails.name }}</p>
-                        <p>Date of Birth: {{ personalDetails.dob }}</p>
-                        <p>Contact: {{ personalDetails.contact }}</p>
-                    </div>
-                    <div class="button-row">
-                        <button class="confirm-button" (click)="confirmSection('personal')"
-                                [disabled]="personalConfirmed">Confirm</button>
-                        <button class="edit-button" (click)="editSection('personal')">Edit</button>
-                    </div>
-                </div>
+            <!-- Personal Details -->
+            <div class="detail-section border p-4 mb-4 position-relative" style="border-radius: 10px;" [class.border-success]="personalConfirmed">
+                <h2 class="mb-3 fw-bold" style="font-size: 22px;">Personal Details</h2>
+                <button 
+                    class="btn btn-sm position-absolute edit-btn" 
+                    style="top: 10px; right: 10px; background-color: transparent; border: none;" 
+                    (click)="editSection('personal')">
+                    <i class="pi pi-pencil" style="font-size: 20px; color: #226AB2;"></i>
+                </button>
+                <p><strong>Name:</strong> {{ personalDetails.name }}</p>
+                <p><strong>Date of Birth:</strong> {{ personalDetails.dob }}</p>
+                <p><strong>Contact:</strong> {{ personalDetails.contact }}</p>
             </div>
-            
-            <div class="detail-section" [class.confirmed]="insuranceConfirmed">
-                <div class="detail-content">
-                    <div>
-                        <h2>Insurance Details</h2>
-                        <p>Insurance Provider: {{ insuranceDetails.provider }}</p>
-                        <p>Policy Number: {{ insuranceDetails.policyNumber }}</p>
-                    </div>
-                    <div class="button-row">
-                        <button class="confirm-button" (click)="confirmSection('insurance')"
-                                [disabled]="insuranceConfirmed">Confirm</button>
-                        <button class="edit-button" (click)="editSection('insurance')">Edit</button>
-                    </div>
-                </div>
+
+            <!-- Insurance Details -->
+            <div class="detail-section border p-4 mb-4 position-relative" style="border-radius: 10px;" [class.border-success]="insuranceConfirmed">
+                <h2 class="mb-3 fw-bold" style="font-size: 22px;">Insurance Details</h2>
+                <button 
+                    class="btn btn-sm position-absolute edit-btn" 
+                    style="top: 10px; right: 10px; background-color: transparent; border: none;" 
+                    (click)="editSection('insurance')">
+                    <i class="pi pi-pencil" style="font-size: 20px; color: #226AB2;"></i>
+                </button>
+                <p><strong>Insurance Provider:</strong> {{ insuranceDetails.provider }}</p>
+                <p><strong>Policy Number:</strong> {{ insuranceDetails.policyNumber }}</p>
             </div>
-            
-            <div class="detail-section" [class.confirmed]="appointmentConfirmed">
-                <div class="detail-content">
-                    <div>
-                        <h2>Appointment Details</h2>
-                        <p>Doctor: {{ appointmentDetails.doctor }}</p>
-                        <p>Date: {{ appointmentDetails.date }}</p>
-                        <p>Time: {{ appointmentDetails.time }}</p>
-                        <p>Your appointment details found, you do not need walk in process</p>
-                    </div>
-                    <div class="button-row">
-                        <button class="confirm-button" (click)="confirmSection('appointment')"
-                                [disabled]="appointmentConfirmed">Confirm</button>
-                        <button class="edit-button" (click)="editSection('appointment')">Edit</button>
-                    </div>
-                </div>
+
+            <!-- Appointment Details -->
+            <div class="detail-section border p-4 mb-4 position-relative" style="border-radius: 10px;" [class.border-success]="appointmentConfirmed">
+                <h2 class="mb-3 fw-bold" style="font-size: 22px;">Appointment Details</h2>
+                <button 
+                    class="btn btn-sm position-absolute edit-btn" 
+                    style="top: 10px; right: 10px; background-color: transparent; border: none;" 
+                    (click)="editSection('appointment')">
+                    <i class="pi pi-pencil" style="font-size: 20px; color: #226AB2;"></i>
+                </button>
+                <p><strong>Doctor:</strong> {{ appointmentDetails.doctor }}</p>
+                <p><strong>Date:</strong> {{ appointmentDetails.date }}</p>
+                <p><strong>Time:</strong> {{ appointmentDetails.time }}</p>
+                <p>Your appointment details found, you do not need a walk-in process.</p>
             </div>
         </div>
 
-        <div *ngIf="allConfirmed" class="proceed-row">
-            <button class="proceed-button" (click)="proceed()">Proceed</button>
+        <!-- Confirm Button -->
+        <div class="text-center mt-4">
+            <button 
+                class="btn btn-lg custom-btn" 
+                (click) ="proceed()"
+                style="
+                    background-color: #226AB2; 
+                    color: white; 
+                    padding: 10px 28px; 
+                    font-size: 18px; 
+                    border: none; 
+                    border-radius: 10px; 
+                    cursor: pointer; 
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+                    transition: all 0.3s ease;">
+                Confirm
+            </button>
         </div>
+        
     </div>
 </div>

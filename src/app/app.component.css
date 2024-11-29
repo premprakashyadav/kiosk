@@ -7,3 +7,20 @@
     background: linear-gradient(135deg, #f0f5f8, #d3dbe0);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
+/* Apply to the root layout container */
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent unnecessary scrolling */
+  }
+  
+  app-header {
+    flex-shrink: 0; /* Prevent shrinking of the header */
+  }
+  
+  .card-info {
+    flex-grow: 1; /* Take up the remaining space */
+    overflow-y: auto; /* Enable scrolling only for this section when needed */
+  }
+  

@@ -1,44 +1,45 @@
-<div class="wrapper">
-   
-    <!-- <section class="headingbg">
-        <h1 class="mb-0 text-center">Reason To Visit</h1>
-    </section>
-    <div class="container-fluid custom-width mt-5">
-        <div class="row">
-           
-            <div class="col-6 mx-auto">
-                <div class="manually">
-                <div class="p-5">
-                    <div class="form-group">
-                        <label for="">Enter Below Reason</label>
-                        <textarea  pInputTextarea name="" id="" rows="5" class="form-control"></textarea>
-                       </div>
-                       <div><p-button label="Submit" (onClick)="submitReason()"></p-button></div>  
-                
-            </div>
-            </div>
-                
-            </div>
-        </div>
-    </div> -->
-
-
-    <div class="container">
-        <div class="visit-reason-step" style="width: 830px;">
-            <h1>Reason of Visit</h1>
-            <p>Please enter the reason for your visit:</p>
-    
+<div class="wrapper d-flex justify-content-center align-items-center" style="min-height: 90vh;">
+    <img src="../../../assets/images/identify_patients/Dot matrix.png" alt="Image 2" class="image-center-left">
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="visit-reason-step" style="max-width: 600px; width: 100%; background-color: #f9f9f9; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+            <h1 style="font-size: 28px; font-weight: bold; margin-bottom: 20px; text-align: center; color: #226AB2;">Reason for Visit</h1>
+            <p style="font-size: 16px; text-align: center; margin-bottom: 20px; color: #555;">
+                Please enter the reason for your visit:
+            </p>
+        
             <form (ngSubmit)="submitReason()">
-                <div class="form-group">
-                    <textarea [(ngModel)]="reason" name="reason" rows="5" placeholder="Enter your reason here" required></textarea>
+                <div class="form-group mb-4">
+                    <textarea 
+                        [(ngModel)]="reason" 
+                        name="reason" 
+                        rows="5" 
+                        placeholder="Enter your reason here..." 
+                        required 
+                        class="form-control"
+                        style="width: 100%; padding: 15px; border-radius: 5px; border: 1px solid #ccc; font-size: 16px; resize: none;">
+                    </textarea>
                 </div>
                 
-                <div class="button-row">
-                    <button type="submit" class="submit-button">Submit</button>
+                <div class="button-row d-flex justify-content-center">
+                    <button type="submit" 
+                        class="submit-button" 
+                        style="padding: 10px 20px; font-size: 16px; background-color: #226AB2; color: white; border: none; border-radius: 5px; cursor: pointer; transition: all 0.3s ease;">
+                        Submit
+                    </button>
                 </div>
             </form>
         </div>
     </div>
-    
 </div>
-
+<p-dialog 
+    [(visible)]="isPopupVisible" 
+    [modal]="true" 
+    [closable]="true" 
+    [showHeader]="true" 
+    [baseZIndex]="1000" 
+    styleClass="custom-dialog">
+    <div class="d-flex flex-column align-items-center">
+        <i [class]="'pi ' + popupIcon" [style.color]="popupColor" style="font-size: 50px; margin-bottom: 10px;"></i>
+        <p class="text-center">{{ popupMessage }}</p>
+    </div>
+</p-dialog>

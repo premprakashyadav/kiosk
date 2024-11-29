@@ -1,7 +1,6 @@
-.wrapper {
+/* .wrapper {
     height: 100vh;
     width: 100%;
-    /* background: url(../../../assets/images/main-bg.svg) no-repeat; */
     background: #f0f5f8;
     background-size: cover;
     background-position: top;
@@ -39,9 +38,6 @@ header {
     background: #fff;
     border-radius: 1rem;
     box-shadow: 1px 1px 10px #ccc;
-    /* border: 2px solid transparent;
-    border-image-source: linear-gradient(45deg, #2a7bbd, #5eb07b);
-    border-image-slice: 1; */
 }
 
 .manually h2 {
@@ -141,5 +137,165 @@ label {
 .button-row {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Space between buttons */
+    gap: 20px;
+} */
+
+.wrapper {
+    position: relative; /* For positioning child elements */
+    height: 90vh; /* Full viewport height */
+    width: 100%; /* Full viewport width */
+    overflow: hidden; /* Prevent overflow causing scrollbars */
+  }
+  .image-bottom-right {
+    position: absolute;
+    top: 50%; /* Vertically center */
+    right: 50px; /* Adjust distance from the right */
+    transform: translateY(-50%); /* Adjust to align center vertically */
+    width: 650px; /* Set desired width */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1;
+  }
+  .image-center-left {
+    position: absolute;
+    top: 15%; /* Vertically center */
+    left: 10px; /* Adjust distance from the left */
+    width: 100px; /* Set desired width */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1;
+  }
+  /* Wrapper styles */
+/* Wrapper styles */
+.container {
+    font-family: 'Mulish', sans-serif; /* Use Mulish font family */
+    padding: 50px 0; /* Add space above and below the content */
+  }
+  
+  /* Content box styles */
+  .content-wrapper {
+    border-radius: 8px; /* Slightly rounded corners */
+    width: 100%; /* Ensure responsiveness */
+  }
+  
+  /* Buttons */
+  button {
+    font-family: 'Mulish', sans-serif; /* Ensure buttons also use Mulish */
+  }
+  /* Apply Mulish font to all text */
+body {
+    font-family: 'Mulish', sans-serif;
+  }
+  
+  /* Custom styles for h1 */
+  .custom-h1 {
+    font-size: 48px; /* Set the font size for h1 */
+    font-weight: 600; /* You can adjust weight if needed */
+  }
+  
+  /* Custom styles for h2 */
+  .custom-h2 {
+    font-size: 21px; /* Set the font size for h2 */
+    font-weight: 400; /* Normal weight for h2 */
+  }
+  /* Button Customization */
+.custom-btn {
+    font-size: 18px; 
+    padding: 12px 30px; /* More padding for a better look */
+    border-radius: 50px; /* Ensuring rounded corners */
+    transition: all 0.3s ease; /* Smooth transition effect */
+  }
+  
+  .custom-btn:hover {
+    transform: translateY(-5px); /* Slight hover effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Adding shadow on hover */
+  }
+  
+  .custom-btn:focus {
+    outline: none; /* Removes focus outline */
+  }
+  
+  .btn-primary.custom-btn {
+    background-color: #226AB2; /* Custom blue color */
+    border: none; /* Removes default border */
+  }
+  
+  .btn-secondary.custom-btn {
+    background-color: #6c757d; /* Custom gray color */
+    border: none; /* Removes default border */
+  }
+  
+
+
+  /* Identify yourself Screen */
+  /* Section Heading Styling */
+.headingbg {
+    padding: 50px 0;
+    color: #226AB2; /* Heading text color */
+  }
+  
+  /* Custom Width for the form */
+  .custom-width {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Form Styles */
+  .manually {
+    background-color: #ffffff;
+    padding: 0px 30px;
+    /* border-radius: 10px; */
+    border-left: 2px solid grey;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  }
+  
+  /* License Section (GIF) */
+  .license img {
+    max-width: 100%; /* Ensures responsive scaling */
+    height: auto;
+  }
+  
+  .license p {
+    margin-top: 15px;
+    color: #666; /* Soft text color */
+    font-size: 14px;
+  }
+  
+  /* Alert Box for Invalid Inputs */
+  .alert.alert-danger {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  /* Inputs and Form Controls */
+  .form-control {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+  }
+  
+  .form-control.ng-invalid {
+    border-color: #dc3545;
+  }
+  
+  .text-center p-button {
+    font-size: 16px;
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 767px) {
+    .col-md-6 {
+      margin-bottom: 15px;
+    }
+  }
+  .btn-outline-primary {
+    border-color: #226AB2;
+    color: #226AB2;
 }
+
+.btn-outline-primary:hover {
+    background-color: #226AB2; /* Same as border color */
+    color: white !important; /* White text on hover */
+    text-decoration: none; /* Remove any underline on hover */
+}
+

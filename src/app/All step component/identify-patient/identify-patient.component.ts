@@ -11,6 +11,7 @@ export class IdentifyPatientComponent implements OnInit {
   startCheckIn: boolean = false;
   checkinForYourself: boolean = false;
   identifyScreen: boolean = false;
+  isPopupVisible: boolean = false;
   genderOptions = [
     { name: 'Male', code: 'NY' },
     { name: 'Female', code: 'RM' },
@@ -43,7 +44,20 @@ export class IdentifyPatientComponent implements OnInit {
     this.checkinForYourself = true;
   }
 
+  // onSearch() {
+  //   this.formGrp.get('fullname')?.value === 'john' ? this.router.navigateByUrl('/verify-otp'): this.router.navigateByUrl('/register');
+  // }
   onSearch() {
-    this.formGrp.get('fullname')?.value === 'john' ? this.router.navigateByUrl('/verify-otp'): this.router.navigateByUrl('/register');
+    // Show the popup
+    this.isPopupVisible = true;
+
+    // Simulate a delay (e.g., API response time)
+    setTimeout(() => {
+      // Hide the popup
+      this.isPopupVisible = false;
+
+      // Navigate to the next page
+      this.router.navigate(['/verify-otp']);
+    }, 3000); // 3 seconds
   }
 }

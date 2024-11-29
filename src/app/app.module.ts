@@ -39,6 +39,8 @@ import { OskInputDirective } from './keyboard/osk-input.directive';
 import { KeyboardKeyDirective } from './keyboard/keyboard-key.directive';
 import { KeyboardService } from './keyboard/keyboard.service';
 import { KeyboardComponent } from './keyboard/keyboard.component';
+import { DialogModule } from 'primeng/dialog';
+import {WebcamModule} from 'ngx-webcam';
 
 @NgModule({
   declarations: [
@@ -83,7 +85,9 @@ import { KeyboardComponent } from './keyboard/keyboard.component';
     KeyFilterModule,
     ButtonModule,
     DropdownModule,
-    CheckboxModule
+    CheckboxModule,
+    DialogModule,
+    WebcamModule,
   ],
   providers: [
     {provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true},

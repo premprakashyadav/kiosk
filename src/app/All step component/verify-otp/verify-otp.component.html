@@ -1,58 +1,81 @@
-<div class="wrapper">
-   
-    <!-- <section class="headingbg">
-        <h1 class="mb-0 text-center">Verification</h1>
-    </section>
-    <div class="container-fluid custom-width mt-5">
-        <div class="row">
-           
-            <div class="col-6 mx-auto">
-                <div class="manually">
-                <div class="p-5">
-                    <div class="row mb-3">
-                        <div class="col-12 text-center">
-                            <div class="form-group">
-                                <label for="" class="mb-3">Please verify yourself with OTP send on mobile and Email</label>
-                                <input type="text" pInputText pKeyFilter="num" class="form-control" placeholder="Enter OTP" [formControl]="otp">
-                               </div>
-                               <div>
-                                <p-button label="Verify" (onClick)="verifyOtp()"></p-button>
-                            </div> 
-                              
-                        </div>
-                        
-                    </div>
-                
-                  
-                
-            </div>
-            </div>
-                
-            </div>
+<div class="wrapper d-flex flex-column align-items-center justify-content-center" style="height: 90vh;">
+    <img src="../../../assets/images/identify_patients/Dot matrix.png" alt="Image 2" class="image-center-left">
+    <img src="../../../assets/images/identify_patients/Search.png" alt="Image 2" class="image-right-left">
+    <div class="container text-center">
+        <h1 class="mb-4" style="font-size: 40px; font-weight: 600;">
+            <!-- Checkmark icon inside a circle -->
+            <span class="icon-circle">
+                <i class="pi pi-check" style="font-size: 24px; color: white;font-weight: bolder;"></i>
+            </span>
+            We found you in the system
+        </h1>
+        
+        <p class="mb-4" style="font-size: 28px; color: #226AB2;">
+            <!-- Add a key icon to represent verification methods -->
+            Please choose a verification method:
+        </p>
+        
+        <div class="d-flex justify-content-center gap-3 mb-4">
+            <button class="btn btn-primary btn-lg rounded-pill custom-btn" (click)="verifyThroughMobile()">Verify
+                through Mobile</button>
+            <button class="btn btn-secondary btn-lg rounded-pill custom-btn" (click)="enterSecurityQuestion()">Enter
+                Security Question</button>
         </div>
-    </div> -->
 
-    <div class="container">
-        <div class="verification-step">
-            <h1>We found you in the system</h1>
-            <p>Please choose a verification method:</p>
-            <div class="button-row">
-                <button class="verify-button" (click)="verifyThroughMobile()">Verify through Mobile</button>
-                <button class="verify-button" (click)="enterSecurityQuestion()">Enter Security Question</button>
+        <!-- OTP Verification Section -->
+        <div *ngIf="showOTPSection" class="mt-5 p-4 border d-flex flex-column align-items-center justify-content-center"
+            style="background-color: #f9f9f9; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 10px; width: 600px; margin: 0 auto;">
+            <h2 class="mb-3" style="font-size: 32px; font-weight: 600;">Mobile Verification</h2>
+            <p class="mb-4" style="font-size: 18px;">We have sent an OTP to your mobile. Please enter it below:</p>
+            <div class="form-group w-50 mx-auto mb-4">
+                <input id="otp" type="text" class="form-control text-center" [(ngModel)]="otp" placeholder="Enter OTP"
+                    style="font-size: 18px;">
             </div>
-            <ng-container class="otp-section" *ngIf="showOTPSection">
-                <p>We have sent an OTP to your mobile. Please enter it below:</p>
-                <input id="otp" type="text" [(ngModel)]="otp" placeholder="Enter OTP">
-                <button class="submit-button" (click)="submitOTP()">Submit</button>
-            </ng-container>
-            <ng-container class="security-question-section" *ngIf="showSecurityQuestionSection">
-                <p>Please answer the following security question:</p>
-                <p id="securityQuestion">{{ securityQuestion }}</p>
-                <input id="security-q" type="text" [(ngModel)]="securityAnswer" placeholder="Enter your answer">
-                <button class="submit-button" (click)="submitSecurityAnswer()">Submit</button>
-            </ng-container>
+            <button class="btn btn-success btn-lg rounded-pill px-5" (click)="submitOTP()">Submit</button>
+        </div>
+
+        <!-- Security Question Section -->
+        <div *ngIf="showSecurityQuestionSection"
+            class="mt-5 p-4 border d-flex flex-column align-items-center justify-content-center"
+            style="background-color: #f9f9f9; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 10px; width: 600px; margin: 0 auto;">
+            <h2 class="mb-3" style="font-size: 32px; font-weight: 600;">Security Question</h2>
+            <p class="mb-2" style="font-size: 18px;">Please answer the following security question:</p>
+            <p id="securityQuestion" class="mb-4 font-weight-bold text-primary" style="font-size: 20px;">{{
+                securityQuestion }}</p>
+            <div class="form-group w-50 mx-auto mb-4">
+                <input id="security-q" type="text" class="form-control text-center" [(ngModel)]="securityAnswer"
+                    placeholder="Enter your answer" style="font-size: 18px;">
+            </div>
+            <button class="btn btn-success btn-lg rounded-pill px-5" (click)="submitSecurityAnswer()">Submit</button>
         </div>
     </div>
-    
 </div>
+<!-- Loading Dialog -->
+<p-dialog 
+  [(visible)]="isPopupVisible" 
+  [modal]="true" 
+  [closable]="true" 
+  [showHeader]="true" 
+  [baseZIndex]="1000" 
+  styleClass="loading-dialog">
+  <div class="d-flex flex-column align-items-center">
+    <img src="../../../assets/gif/verified.gif" alt="Loading" style="width: 300px; height: auto;" />
+    <!-- <p class="mt-3 text-secondary">Processing your request...</p> -->
+  </div>
+</p-dialog>
 
+<!-- Success Popup Dialog -->
+<p-dialog 
+  [(visible)]="displaySuccessPopup" 
+  [modal]="true" 
+  [closable]="true" 
+  [showHeader]="true" 
+  [baseZIndex]="1000"  
+  [style]="{ width: '350px' }">
+  <div class="text-center">
+    <i class="pi pi-check-circle" style="font-size: 50px; color: green;"></i>
+    <h3 class="mt-3">Successfully Registered</h3>
+    <p>Your OTP has been verified successfully.</p>
+  </div>
+</p-dialog>
+  

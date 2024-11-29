@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 export class ConsentComponent implements OnInit {
 
   otp: FormControl = new FormControl();
+  isPopupVisible: boolean = false;
+popupMessage: string = '';
 
   constructor(private router:Router) { }
 
@@ -21,15 +23,25 @@ export class ConsentComponent implements OnInit {
   }
 
   agree() {
-    // Logic to handle consent agreement
-    this.router.navigateByUrl('/reason-visit');
-    // Redirect to the next step or page
+    this.showPopup('You have agreed to the consent form.', () => {
+      this.router.navigateByUrl('/reason-visit');
+    });
   }
-
+  
   disagree() {
-    // Logic to handle consent disagreement
-    alert('You have disagreed to the consent form.');
-    // Redirect to a different page or show a message
+    this.showPopup('You have disagreed to the consent form.', () => {
+      // Add any further action for disagreement, if necessary
+    });
+  }
+  
+  showPopup(message: string, callback: () => void) {
+    this.popupMessage = message; // Assign the message to a variable
+    this.isPopupVisible = true;  // Display the popup
+  
+    setTimeout(() => {
+      this.isPopupVisible = false; // Hide the popup
+      callback(); // Perform the next action
+    }, 3000); // Show the popup for 3 seconds
   }
 
 }
